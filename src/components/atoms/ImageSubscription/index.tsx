@@ -8,7 +8,7 @@ const ImageSubsription = ({ src }: { src: string }) => {
       alt="logo-subcription"
       height={170}
       width={170}
-      className="rounded-full object-cover w-7 h-7"
+      className="rounded-full object-cover w-6 h-6"
     />
   );
 };

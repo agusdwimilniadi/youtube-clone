@@ -4,10 +4,10 @@ import Image from 'next/image';
 import React from 'react';
 import { ImYoutube2 } from 'react-icons/im';
 
-const NavbarLeft = () => {
+const NavbarLeft = ({ onClikNavbar }: { onClikNavbar: () => void }) => {
   return (
     <div className="flex items-center gap-2">
-      <ButtonSidebar />
+      <ButtonSidebar onClikNavbar={onClikNavbar} />
       <IconYoutube />
     </div>
   );
