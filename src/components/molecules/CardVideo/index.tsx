@@ -1,6 +1,7 @@
 import ImageThumbnail from '@/components/atoms/ImageThumbnail';
 import React from 'react';
 import CardContent from '@/components/atoms/CardContent';
+import Link from 'next/link';
 
 const CardVideo = ({
   thumbnail,
@@ -12,10 +13,10 @@ const CardVideo = ({
   accountName: string;
 }) => {
   return (
-    <div>
+    <Link href={'/12345'}>
       <ImageThumbnail thumbnail={thumbnail} />
       <CardContent accountName={accountName} title={title} />
-    </div>
+    </Link>
   );
 };
 
