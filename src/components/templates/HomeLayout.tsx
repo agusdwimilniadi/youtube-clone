@@ -11,11 +11,10 @@ import {
   SIDEBAR_ITEM_SUBSCRIPTION,
 } from '@/utils/sidebar-item.contant';
 import SidebarItemLayout from '../atoms/SidebarItemLayout';
-import { GoHomeFill } from 'react-icons/go';
 import Link from 'next/link';
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
-  const [isOpenMobileNav, setIsOpenMobileNav] = useState<boolean>(true);
+  const [isOpenMobileNav, setIsOpenMobileNav] = useState<boolean>(false);
   return (
     <>
       <Navbar
@@ -23,7 +22,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
           setIsOpenMobileNav(!isOpenMobileNav);
         }}
       />
-      <div className="flex">
+      <div className="flex ">
         {isOpenMobileNav ? (
           <div className="w-[6vw]">
             {SIDEBAR_ITEM_HOME.map((item) => (
@@ -108,8 +107,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
             </SidebarItemLayout>
           </div>
         )}
-
-        <div>{children}</div>
+        <div className="grow px-3 py-1">{children}</div>
       </div>
     </>
   );

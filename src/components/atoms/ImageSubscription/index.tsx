@@ -6,9 +6,9 @@ const ImageSubsription = ({ src }: { src: string }) => {
     <Image
       src={src}
       alt="logo-subcription"
-      height={170}
-      width={170}
-      className="rounded-full object-cover w-6 h-6"
+      height={200}
+      width={200}
+      className="rounded-full object-cover w-7 h-7"
     />
   );
 };
